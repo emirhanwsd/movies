@@ -21,12 +21,9 @@ const Home = ({movies}) => {
             </header>
 
             <div className="w-full h-3/4 gap-x-6 gap-y-12 flex flex-wrap items-center justify-center">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                {movies.map(movie => {
+                    return <Card title={movie.title} id={movie.id} details={movie.overview} thumbnail={movie.backdrop_path} vote={movie.vote_average}/>
+                })}
             </div>
         </div>
     )
@@ -39,7 +36,7 @@ export async function getStaticProps(context) {
 
     return {
         props: {
-            movies: movies
+            movies: movies.results
         }
     }
 }
