@@ -22,6 +22,7 @@ npm run dev
 - [x] Fetch movies from API
 - [x] Responsive design
 - [ ] View movie
+- [ ] Load more movies when scroll
 
 ## ⛏️ API
 
