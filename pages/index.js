@@ -15,7 +15,7 @@ const Home = () => {
 
             <header className="flex flex-col items-center jusfify-center">
                 <h3 className="text-4xl font-bold mb-3">Movies</h3>
-                <p className="text-xl text-gray-400 mb-12">Let's inspect most popular films with details.</p>
+                <p className="text-xl text-gray-400 text-center mb-12">Let's inspect most popular films with details.</p>
             </header>
 
             <div className="w-full h-3/4 gap-x-6 gap-y-12 flex flex-wrap items-center justify-center">
