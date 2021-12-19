@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-## ⚙️Technologies
+## ⚙️ Technologies
 
 - [React](https://reactjs.org/)
 - [NextJS](https://nextjs.org/)
@@ -23,7 +23,7 @@ npm run dev
 - [x] Responsive design
 - [ ] View movie
 
-## ⛏️API
+## ⛏️ API
 
 - [The Movie Database](https://developers.themoviedb.org/3/movies/get-popular-movies)
 
