@@ -21,8 +21,8 @@ const Home = ({movies}) => {
             </header>
 
             <div className="w-full h-3/4 gap-x-6 gap-y-12 flex flex-wrap items-center justify-center">
-                {movies.map(movie => {
-                    return <Card title={movie.title} id={movie.id} details={movie.overview} thumbnail={movie.backdrop_path} vote={movie.vote_average}/>
+                {movies.map((movie, index) => {
+                    return <Card key={index} title={movie.title} id={movie.id} details={movie.overview} thumbnail={movie.backdrop_path} vote={movie.vote_average}/>
                 })}
             </div>
         </div>
