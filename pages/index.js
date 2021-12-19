@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Card from "../components/Card";
 
-const Home = () => {
+const API_KEY = "3830aec43400f6c1e61f95921a0c6867";
+
+const Home = ({movies}) => {
     return (
         <div className="w-full px-12 pt-24 pb-12 flex flex-col justify-center text-gray-900">
             <Head>
@@ -28,6 +30,18 @@ const Home = () => {
             </div>
         </div>
     )
+}
+
+export async function getStaticProps(context) {
+    let movies = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+
+    movies = await movies.json();
+
+    return {
+        props: {
+            movies: movies
+        }
+    }
 }
 
 export default Home;
