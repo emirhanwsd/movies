@@ -29,7 +29,7 @@ const Movie = ({movie}) => {
     }
 
     return (
-        <div>
+        <div className="w-full flex flex-col px-8 py-12 text-gray-900">
             <Head>
                 <title>{movie.title}</title>
                 <link rel="icon" href="/favicon.ico"/>
@@ -39,9 +39,28 @@ const Movie = ({movie}) => {
                       rel="stylesheet"/>
             </Head>
 
-            <main>
-                // TODO
-            </main>
+            <img className="w-full max-h-[36rem] object-cover rounded-lg drop-shadow-lg mb-12" src={`https://www.themoviedb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}/>
+
+            <div className="w-full h-96 flex gap-x-8">
+                <div className="w-3/5 h-full  border-r">
+                    <div className="flex gap-x-4 mb-4">
+                        <h3 className="text-2xl font-bold">{movie.title}</h3>
+                        <span className="w-auto px-4 max-w-max rounded-full shadow-sm flex items-center justify-center text-sm font-semibold bg-blue-100 text-blue-500">{movie.status}</span>
+                    </div>
+                    <p className="text-gray-600 mb-8">{movie.overview}</p>
+                    <ul>
+                        <h4 className="text-gray-700 mb-4">Genres</h4>
+                        {movie.genres.map(genre => {
+                            return <li className="ml-2">
+                                <span className="flex items-center gap-x-2 before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-400 before:text-gray-300 text-gray-500">{genre.name}</span>
+                            </li>
+                        })}
+                    </ul>
+                </div>
+                <div className="h-full flex-1">
+                    ...
+                </div>
+            </div>
         </div>
     )
 }
@@ -53,8 +72,6 @@ Movie.getInitialProps = async (context) => {
 https://api.themoviedb.org/3/movie/${query.id}?api_key=${API_KEY}&language=en-US`);
 
     movie = await movie.json();
-
-    console.log(movie)
 
     return {
         movie: movie
