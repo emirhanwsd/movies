@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-## ⚙️Technologies
+## ⚙️ Technologies
 
 - [React](https://reactjs.org/)
 - [NextJS](https://nextjs.org/)
@@ -22,8 +22,10 @@ npm run dev
 - [x] Fetch movies from API
 - [x] Responsive design
 - [ ] View movie
+- [ ] Load more movies when scroll
+- [ ] Caching movies
 
-## ⛏️API
+## ⛏️ API
 
 - [The Movie Database](https://developers.themoviedb.org/3/movies/get-popular-movies)
 
