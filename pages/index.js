@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import MovieCard from "../components/MovieCard";
 
-const API_KEY = "3830aec43400f6c1e61f95921a0c6867";
+export const API_KEY = "3830aec43400f6c1e61f95921a0c6867";
 
 const Home = ({movies}) => {
     return (
@@ -29,15 +29,13 @@ const Home = ({movies}) => {
     )
 }
 
-export async function getStaticProps(context) {
+Home.getInitialProps = async (context) => {
     let movies = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
 
     movies = await movies.json();
 
     return {
-        props: {
-            movies: movies.results
-        }
+        movies: movies.results
     }
 }
 
