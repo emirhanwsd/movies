@@ -23,6 +23,7 @@ npm run dev
 - [x] Responsive design
 - [ ] View movie
 - [ ] Load more movies when scroll
+- [ ] Caching movies
 
 ## ⛏️ API
 
