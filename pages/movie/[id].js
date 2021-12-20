@@ -41,14 +41,14 @@ const Movie = ({movie}) => {
 
             <img className="w-full max-h-[36rem] object-cover rounded-lg drop-shadow-lg mb-12" src={`https://www.themoviedb.org/t/p/original${movie.backdrop_path}`} alt={movie.title}/>
 
-            <div className="w-full h-96 flex gap-x-8">
-                <div className="w-3/5 h-full  border-r">
-                    <div className="flex gap-x-4 mb-4">
-                        <h3 className="text-2xl font-bold">{movie.title}</h3>
+            <div className="w-full h-96 flex flex-col md:flex-row gap-x-8">
+                <div className="w-full md:w-3/5 md:h-full border-b md:border-b-0 md:border-r mb-2 md:mb-0">
+                    <div className="flex flex-col md:flex-row gap-y-2 md:gap-y-0 gap-x-4 mb-4">
+                        <h3 className="text-xl md:text-2xl font-bold">{movie.title}</h3>
                         <span className="w-auto px-4 max-w-max rounded-full shadow-sm flex items-center justify-center text-sm font-semibold bg-blue-100 text-blue-500">{movie.status}</span>
                     </div>
                     <p className="text-gray-600 mb-8">{movie.overview}</p>
-                    <ul>
+                    <ul className="mb-4 md:mb-0">
                         <h4 className="text-gray-700 mb-4">Genres</h4>
                         {movie.genres.map(genre => {
                             return <li className="ml-2">
