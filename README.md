@@ -21,7 +21,7 @@ npm run dev
 - [x] List movies
 - [x] Fetch movies from API
 - [x] Responsive design
-- [x] View movie
+- [x] View movie with details
 - [ ] Load more movies when scroll
 - [ ] Caching movies
 
