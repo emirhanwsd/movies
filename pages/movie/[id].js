@@ -50,8 +50,8 @@ const Movie = ({movie}) => {
                     <p className="text-gray-600 mb-8">{movie.overview}</p>
                     <ul className="mb-4 md:mb-0">
                         <h4 className="text-gray-700 mb-4">Genres</h4>
-                        {movie.genres.map(genre => {
-                            return <li className="ml-2">
+                        {movie.genres.map((genre, index) => {
+                            return <li key={index} className="ml-2">
                                 <span className="flex items-center gap-x-2 before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-400 before:text-gray-300 text-gray-500">{genre.name}</span>
                             </li>
                         })}
