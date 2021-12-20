@@ -57,7 +57,7 @@ const Movie = ({movie}) => {
                         })}
                     </ul>
                 </div>
-                <div className="h-full flex-1">
+                <div className="md:h-full flex-1">
                     ...
                 </div>
             </div>
