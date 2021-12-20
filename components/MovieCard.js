@@ -1,4 +1,4 @@
-const Card = props => {
+const MovieCard = props => {
     let voteClasses = `w-auto px-4 max-w-max rounded-full shadow-sm flex items-center justify-center text-sm font-semibold mb-2 ${props.vote > 7 ? "bg-green-100 text-green-500" : "bg-yellow-100 text-yellow-500"}`;
 
     return (
@@ -13,4 +13,4 @@ const Card = props => {
     )
 }
 
-export default Card;
+export default MovieCard;

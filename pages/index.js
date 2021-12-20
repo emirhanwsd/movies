@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Card from "../components/Card";
+import MovieCard from "../components/MovieCard";
 
 const API_KEY = "3830aec43400f6c1e61f95921a0c6867";
 
@@ -22,7 +22,7 @@ const Home = ({movies}) => {
 
             <div className="w-full h-3/4 gap-x-6 gap-y-12 flex flex-wrap items-center justify-center">
                 {movies.map((movie, index) => {
-                    return <Card key={index} title={movie.title} id={movie.id} details={movie.overview} thumbnail={movie.backdrop_path} vote={movie.vote_average}/>
+                    return <MovieCard key={index} title={movie.title} id={movie.id} details={movie.overview} thumbnail={movie.backdrop_path} vote={movie.vote_average}/>
                 })}
             </div>
         </div>
